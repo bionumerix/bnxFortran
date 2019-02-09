@@ -10,23 +10,23 @@
 
 #>----------------------------------------------------------------------------<#
 
-##' @keywords internal
+#' @keywords internal
 .onLoad <- function(libname, pkgname) {
     tryCatch(
         library.dynam("bnxFortran", pkgname, libname),
         error = function(e) e
     )
 }
-##' @keywords internal
+#' @keywords internal
 .onAttach <- function(libname, pkgname) {
     .onLoad(libname, pkgname)
 }
 
-##' @keywords internal
+#' @keywords internal
 .onUnload <- function(libpath) {
     library.dynam.unload("bnxFortran", libpath)
 }
-##' @keywords internal
+#' @keywords internal
 .onDetach <- function(libpath) {
     .onUnload(libpath)
 }

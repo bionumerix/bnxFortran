@@ -7,18 +7,18 @@
 BF_C_intrpl(n, x, y, rn, rx, ry, err)
 }
 \arguments{
-\item{n}{An integer scalar from e.g. \code{as.integer()}. The number of
-input data points. Must be 2 or greater.}
+\item{n}{An integer scalar from e.g. \code{as.integer()}. The number of input
+data points. Must be 2 or greater.}
 
-\item{x}{An double vector from e.g. \code{as.double()}. A numeric vector
-with the x-values (abscissas) of input data points in ascending order.}
+\item{x}{An double vector from e.g. \code{as.double()}. A numeric vector with
+the x-values (abscissas) of input data points in ascending order.}
 
-\item{y}{An double vector from e.g. \code{as.double()}. A numeric vector
-with the y-values (ordinates) of input data points.}
+\item{y}{An double vector from e.g. \code{as.double()}. A numeric vector with
+the y-values (ordinates) of input data points.}
 
 \item{rn}{An integer scalar from e.g. \code{as.integer()}. The number of
-points at which interpolation of the y-value (ordinate) is desired. Must
-be 1 or greater.}
+points at which interpolation of the y-value (ordinate) is desired. Must be
+1 or greater.}
 
 \item{rx}{An double vector from e.g. \code{as.double()}. A vector of length
 \code{rn} for the x-values (abscissas) of desired points.}
@@ -41,11 +41,11 @@ For details see: \code{\link[=aspline-interface]{.aspline}}.
 
 \section{Callable}{
  The callable function is defined in a C header file as
-follows: \cr \emph{int(\emph{BF_C_intrpl)(int \emph{n, double \emph{x, double \emph{y, int
-\emph{rn, double \emph{rx, double \emph{ry, int \emph{err);} \cr\cr Within the
-\code{R_init_...} function, the callable function is imported via \cr
-\emph{BF_C_intrpl = (int(})(int}, double}, double}, int}, double},
-double}, int})) R_GetCCallable("bnxFortran", "BF_C_intrpl");}.
+follows: \cr \emph{int(\emph{BF_C_intrpl)(int \emph{n, double \emph{x, double \emph{y, int \emph{rn,
+double \emph{rx, double \emph{ry, int \emph{err);} \cr\cr Within the \code{R_init_...}
+function, the callable function is imported via \cr \emph{BF_C_intrpl =
+(int(})(int}, double}, double}, int}, double}, double}, int}))
+R_GetCCallable("bnxFortran", "BF_C_intrpl");}.
 }
 
 \seealso{

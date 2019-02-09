@@ -83,10 +83,10 @@ devtools::install_github("bionumerix/bnxFortran")
 
 Alternatively, you can install the release of the latest development
 version from the *BioNumeriX (BNX)* R repository (only Linux and
-Windows) via:
+Windows)
+via:
 
 ``` r
-## Currently under development:
 install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
 ```
 

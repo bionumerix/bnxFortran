@@ -16,8 +16,8 @@
 exported function. This must be one of \code{"C"} indicates the \code{.C}
 foreign function interface, \code{"Fortran"} indicates the \code{.Fortran}
 foreign function interface, or \code{"Call"} indicates the \code{.Call}
-modern C/C++ function interface. The supported \code{callby} choices
-depend on the individual function. Any unambiguous substring can be given.}
+modern C/C++ function interface. The supported \code{callby} choices depend
+on the individual function. Any unambiguous substring can be given.}
 }
 \description{
 An R interface to the Lawson-Hanson NNLS implementation of an algorithm for

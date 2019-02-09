@@ -4,10 +4,10 @@
 \alias{bnxFortran-callable}
 \title{Callable Interface Function in \strong{bnxFortran} Package}
 \description{
-All callable functions can be called directly from other package source
-code. For details see the details of respective functions listed below.
-Function argument validation, except otherwise stated, shall usually be done
-by the caller.
+All callable functions can be called directly from other package source code.
+For details see the details of respective functions listed below. Function
+argument validation, except otherwise stated, shall usually be done by the
+caller.
 }
 \seealso{
 Other interfaces: \code{\link{akima-symbols}},

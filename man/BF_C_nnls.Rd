@@ -22,8 +22,7 @@ of \code{A}, i.e. \code{nrow(A)}.}
 columns of \code{A}, i.e. \code{ncol(A)}.}
 
 \item{B}{An double vector from e.g. \code{as.double()}. An \code{length(N)}
-vector. On entry contains the \code{N} vector. On exit contains
-\code{Q*B}.}
+vector. On entry contains the \code{N} vector. On exit contains \code{Q*B}.}
 
 \item{X}{An double vector from e.g. \code{as.double()}. An \code{length(N)}
 vector. On entry, need to be initialized with \code{0}. On exit contains
@@ -62,8 +61,8 @@ Fortran source \code{src/nnls.f}.
 \section{Callable}{
  The callable function is defined in a C header file as
 follows: \cr \emph{int(\emph{BF_C_nnls)(double \emph{A, int \emph{MDA, int \emph{M, int \emph{N,
-double \emph{B, double \emph{X, double \emph{RNORM, double \emph{W, double \emph{ZZ, int \emph{INDEX,
-int \emph{MODE, int \emph{NSETP);} \cr\cr Within the \code{R_init_...} function, the
+double \emph{B, double \emph{X, double \emph{RNORM, double \emph{W, double \emph{ZZ, int \emph{INDEX, int
+\emph{MODE, int \emph{NSETP);} \cr\cr Within the \code{R_init_...} function, the
 callable function is imported via \cr \emph{BF_C_nnls = (int(})(double},
 int}, int}, int}, double}, double}, double}, double}, double}, int}, int},
 int})) R_GetCCallable("bnxFortran", "BF_C_nnls");}

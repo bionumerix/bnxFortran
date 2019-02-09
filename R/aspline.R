@@ -1,28 +1,28 @@
-##' Univariate Akima Interpolation
-##'
-##' The function returns a list of points which smoothly interpolate given data
-##' points. For details see \code{\link[akima]{aspline}}.
-##'
-##' @name aspline-interface
-##' @inheritParams akima::aspline
-##' @inheritParams argCallby
-##' @author Credit: This function is based on the \code{\link[akima]{aspline}}
-##'   functions from \strong{package::akima} by Albrecht Gebhardt \emph{et al.}.
-##'   Some minor modifications have been made to evaluate the results from the
-##'   callable interface routines implemented within this packages.
-##' @seealso \code{\link[akima]{aspline}}
-##' @examples
-##' ## regular spaced data
-##'  x <- 1:10
-##'  y <- c(rnorm(5), c(1,1,1,1,3))
-##'  xnew <- seq(-1, 11, 0.1)
-##'
-##'  orig <- akima::aspline(x, y, xnew)
-##'  cfun <- .aspline(x, y, xnew)
-##'  ffun <- .aspline(x, y, xnew, callby = "F")
-##'  stopifnot(identical(orig, cfun))
-##'  stopifnot(identical(orig, ffun))
-##' @export
+#' Univariate Akima Interpolation
+#'
+#' The function returns a list of points which smoothly interpolate given data
+#' points. For details see \code{\link[akima]{aspline}}.
+#'
+#' @name aspline-interface
+#' @inheritParams akima::aspline
+#' @inheritParams argCallby
+#' @author Credit: This function is based on the \code{\link[akima]{aspline}}
+#'   functions from \strong{package::akima} by Albrecht Gebhardt \emph{et al.}.
+#'   Some minor modifications have been made to evaluate the results from the
+#'   callable interface routines implemented within this packages.
+#' @seealso \code{\link[akima]{aspline}}
+#' @examples
+#' ## regular spaced data
+#'  x <- 1:10
+#'  y <- c(rnorm(5), c(1,1,1,1,3))
+#'  xnew <- seq(-1, 11, 0.1)
+#'
+#'  orig <- akima::aspline(x, y, xnew)
+#'  cfun <- .aspline(x, y, xnew)
+#'  ffun <- .aspline(x, y, xnew, callby = "F")
+#'  stopifnot(identical(orig, cfun))
+#'  stopifnot(identical(orig, ffun))
+#' @export
 .aspline <- function(x,
                      y = NULL,
                      xout,
