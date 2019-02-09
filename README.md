@@ -17,12 +17,12 @@ C or C++ source code level of other R packages.
 
 This package has been created with at least two main purposes in mind:
 
-A) Using R's `R_RegisterCCallable` to enable function calling at the the source
+- Using R's `R_RegisterCCallable` to enable function calling at the the source
   code (`src`) level of other R packages.
-B) Placing all *Fortran* algorithms needed by the *BioNumeriX (BNX)* R packages
+- Placing all *Fortran* algorithms needed by the *BioNumeriX (BNX)* R packages
   and associated C/C++ wrapper functions at a central place for maintenance and
   reusability.
-C) ... (etc.).
+- ... (etc.).
 
 ### Status
 
