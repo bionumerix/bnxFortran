@@ -1,0 +1,60 @@
+## default:
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+## extent:
+.Renviron
+.Rprofile
+.Rapp.history
+.Rd2pdf
+.seed
+
+## gitdocs:
+#.gitmodules
+#.gitattributes
+
+## develop:
+.vs
+.vscode
+.project
+.settings
+.cproject
+.ds_store
+.httr-oauth
+
+## compiler:
+memwatch.*
+src-*
+src/*.o
+src/*.o-*
+src/*.d
+src/*.so
+*.dll
+*.def
+*.gdb.history
+
+## file-ext:
+*.a
+*.sl
+*.log
+*.aux
+*.bak
+*.html
+*.dylib
+*.backups
+*.directory
+*.dropbox
+
+## toplevel:
+archive
+doc
+windows
+Meta
+TEMP
+TODO
+
+## inst-dir:
+inst/doxy/*
+inst/doc

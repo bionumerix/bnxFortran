@@ -1,0 +1,55 @@
+## default:
+^.*\.Rproj$
+^\.Rproj\.user$
+^\.R.*$
+
+## gitdocs:
+^\.git$
+^\.github$
+^\.gitignore$
+^\.gitattributes$
+^\.gitmodules$
+
+## develop:
+^\.vs$
+^\.vscode$
+^\.project$
+^\.settings$
+^\.cproject$
+^\.ds_store$
+^\.httr-oauth$
+
+## ci++:
+^_pkgdown\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^\.covrignore$
+^\.travis\.yml$
+
+## compiler:
+^memwatch.*$
+^.*\.o$
+^.*\.dll$
+
+## toplevel:
+^archive$
+^doc$
+^windows$
+^Meta$
+^CRAN-COMMENTS.md$
+^CRAN-RELEASE$
+^LICENSE\.md$
+^NEWS.md$
+^README\.Rmd$
+^TEMP$
+^TODO$
+^TODO.md$
+
+## toplevel-obsolete:
+^CODE_.*\.md$
+^CONTRIB.*\.md$
+^ISSUE.*\.md$
+
+## inst-dir:
+^Doxyfile$
+^inst/doxy$

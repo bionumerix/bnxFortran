@@ -1,0 +1,48 @@
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: r
+sudo: false
+latex: false
+fortran: true
+
+matrix:
+  include:
+    - os: linux
+      r: release
+    - os: linux
+      r: devel
+    - os: linux
+      r: oldrel
+    - os: linux
+      dist: trusty
+      env: R_CODECOV=true
+      r_check_args: '--use-valgrind'
+    - os: osx
+      r: release
+    - os: osx
+      r: devel
+
+addons:
+  apt:
+    packages:
+    - valgrind
+
+env:
+  global:
+  - _R_CHECK_FORCE_SUGGESTS_ = false
+  - MAKEFLAGS = "-j 2"
+  - TRAVIS_CXXFLAGS = "-Wall -Wextra -pedantic -Werror"
+  - R_REMOTES_NO_ERRORS_FROM_WARNINGS=true
+
+r_packages:
+  - covr
+
+warnings_are_errors: true
+
+after_success:
+  - if [[ "${R_CODECOV}" ]]; then R -e 'covr::codecov()'; fi
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
