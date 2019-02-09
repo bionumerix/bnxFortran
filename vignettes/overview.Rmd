@@ -1,0 +1,11 @@
+---
+title: "Introduction to bnxFortran"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to bnxFortran}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+Currently under development. In the meantime, use the examples via `?bnxFortran`
+and links etc. therein.
