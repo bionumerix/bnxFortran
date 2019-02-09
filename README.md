@@ -20,7 +20,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 **Lines of code:** R = 216; Tests = 95; C = 98; Fortran = 678
 
-**Version:** 0.1.0
+**Version:** 0.1.1
 
 ## Overview
 
@@ -140,7 +140,7 @@ Please read carefully the [contributing](.github/CONTRIBUTING.md) and
 
 ## Further reading
 
-Please read the [contributing](.github/CONTRIBUTIING.md) guidelines if
+Please read the [contributing](.github/CONTRIBUTING.md) guidelines if
 you are interested in contributing to this project.
 
 Please read also the [code of conduct](.github/CODE_OF_CONDUCT.md)
