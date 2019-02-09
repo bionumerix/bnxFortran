@@ -1,7 +1,7 @@
 Package: bnxFortran
 Type: Package
 Title: BNX Interface Package for R2C Callable Fortran Routines
-Version: 0.1.0
+Version: 0.1.1
 Date: 2019-02-09
 Authors@R: c(
       person("Dirk", "Steinhauser",
@@ -62,7 +62,7 @@ Authors@R: c(
 Description: The 'bnxFortran' package provides some C functions that wrap 
     Fortran algorithms. These interface functions are implemented here to be 
     called directly from the C or C++ source code level of other R packages. 
-URL: https://github.com/bionumerix/bnxFortran#readme
+URL: https://github.com/bionumerix/bnxFortran
 BugReports: https://github.com/bionumerix/bnxFortran/issues/new
 License: GPL (>= 3) + file LICENSE
 Depends: R (>= 3.3)

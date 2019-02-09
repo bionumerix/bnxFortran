@@ -44,8 +44,8 @@ Please find below some advices and suggestions:
 ## Reporting an Issue
 
 If you find a (potential) bug within this package, it is strongly recommended to
-[file an issue][ISSUE_NEW]. Please provide as much relevant information as you
-can. Also, please include a minimal [reproducible example](http://www.sscce.org/)
+[file an issue][ISSUE]. Please provide as much relevant information as you can.
+Also, please include a minimal [reproducible example](http://www.sscce.org/)
 (if possible) as otherwise tracing and fixing the issue will be either difficult
 or even unlikely.
 
@@ -82,4 +82,3 @@ Conduct](CODE_OF_CONDUCT.md). By participating in this project you agree to
 abide by its terms.
 
 [ISSUE]: https://github.com/bionumerix/bnxFortran/issues
-[ISSUE_NEW]: https://github.com/bionumerix/bnxFortran/issues/new
