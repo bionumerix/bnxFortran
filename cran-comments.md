@@ -8,7 +8,7 @@ Yet unreleased. Various changes to remove unnecessary dependencies.
 
 * local Windows 10, R 3.5.1.
 * ubuntu 12.04 (on travis-ci), R-rel, R-oldrel, R-devel.
-* mac osx (on travis-ci), R-rel, R-devel.
+* mac osx (on travis-ci), R-rel.
 * windows (on appveyor), R-rel.
 
 ## R CMD check results
