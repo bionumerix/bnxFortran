@@ -2,7 +2,7 @@
  * @file
  * @brief     R2C-Interface: function argument definitions.
  * @authors   Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors.
+ * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @association
  *      This file is part of the bnxFortran R package.

@@ -13,25 +13,6 @@ output:
 desc <- packageDescription(basename(getwd()))
 ```
 
-```{r, include = FALSE}
-## estimate line counts
-CODE <- function(path, pattern) {
-  annos <- "(^\\s*$)|(^\\s*#)|(^\\s*//)|(^\\s*/\\*)|(^\\s*\\*)|^\\s*C"
-  files <- list.files(path, pattern, recursive = TRUE, ignore.case = TRUE,
-                      full.names = TRUE)
-  lines <- unlist(lapply(files, readLines))
-  grep(annos, lines, value = TRUE, invert = TRUE)
-}
-size <- c(
-  "R"       = length(CODE("R", pattern = "\\.R$")),
-  "Tests"   = length(CODE("tests", pattern = "\\.R$")),
-  "C"       = length(CODE(c("src", "inst"), pattern = "\\.h*$|\\.c*$")),
-  "Fortran" = length(CODE("src", pattern = "\\.f*$"))
-)
-```
-
-## Summary
-
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![GPL-3](https://img.shields.io/badge/license-GPL--3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Travis Build Status](https://travis-ci.org/bionumerix/bnxFortran.svg?branch=master)](https://travis-ci.org/bionumerix/bnxFortran)
@@ -39,16 +20,11 @@ size <- c(
 [![Coverage Status](https://codecov.io/github/bionumerix/bnxFortran/branch/master/graph/badge.svg)](https://codecov.io/github/bionumerix/bnxFortran?branch=master)
 [![CRAN Status Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.org/package=bnxFortran)
 
-```{r, results = "asis", echo = FALSE}
-cat("**Lines of code:** ", paste(names(size), size, sep = " = ",
-                                 collapse = "; "))
-```
-
-```{r, results = "asis", echo = FALSE}
-cat("**Version:** ", desc$Version)
-```
-
 ## Overview
+
+```{r, results = "asis", echo = FALSE}
+cat("**Git-Version:** ", desc$Version)
+```
 
 ```{r, results = "asis", echo = FALSE}
 cat(desc$Description)
@@ -111,24 +87,6 @@ from the *BioNumeriX (BNX)* R repository (only Linux and Windows) via:
 
 ``` r
 install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
-```
-
-## Cheatsheet
-
-Under development.
-
-## Usage
-
-Under development. See the documentation and vignettes (if any).
-
-## Citation
-
-When using this R-package for your work or research purposes, please cite this
-package appropriately. Use the following R command to get the recent suggested
-citation information in publications.
-
-``` r
-citation("bnxFortran")
 ```
 
 ## License

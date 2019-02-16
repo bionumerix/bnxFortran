@@ -3,8 +3,6 @@
 
 # bnxFortran <img src="man/figures/logo.png" align="right" />
 
-## Summary
-
 [![Project Status: Active – The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
@@ -18,11 +16,9 @@ Status](https://codecov.io/github/bionumerix/bnxFortran/branch/master/graph/badg
 [![CRAN Status
 Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.org/package=bnxFortran)
 
-**Lines of code:** R = 216; Tests = 95; C = 98; Fortran = 678
-
-**Version:** 0.1.1
-
 ## Overview
+
+**Git-Version:** 0.1.1
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called
@@ -88,24 +84,6 @@ via:
 
 ``` r
 install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
-```
-
-## Cheatsheet
-
-Under development.
-
-## Usage
-
-Under development. See the documentation and vignettes (if any).
-
-## Citation
-
-When using this R-package for your work or research purposes, please
-cite this package appropriately. Use the following R command to get the
-recent suggested citation information in publications.
-
-``` r
-citation("bnxFortran")
 ```
 
 ## License

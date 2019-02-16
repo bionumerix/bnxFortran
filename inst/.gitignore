@@ -1,0 +1,6 @@
+# exclude everything (folders and files)
+doxygen/*
+doc/
+
+# exception to the rule
+!doxygen/.gitkeep

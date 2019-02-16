@@ -2,7 +2,7 @@
  * @file
  * @brief     Assembly header for R package C/C++ interface facilities.
  * @authors   Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors.
+ * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @association
  *      This file is part of the bnxFortran R package.
@@ -42,22 +42,47 @@
 
 //>-CALLABLES----------------------------------------------------------------<//
 //  FROM: ' \*[a-z]*[,][\s]'   TO: '*,'
-int (*BF_C_nnls)(double *, int *, int *, int *, double *, double *, double *,
-                 double *, double *, int *, int *, int *);
-int (*BF_C_intrpl)(int *, double *, double *, int *, double *, double *, int *);
-int (*BF_C_uvip3p)(int *, int *, double *, double *, int *, double *, double *,
-                   int *);
+/*! @brief C API of Lawson's and Hanson's non-negative least squares (NNLS).
+ *  @copydetails nnls()
+ */
+int
+(*BF_C_nnls)(double *, int *, int *, int *, double *, double *, double *,
+             double *, double *, int *, int *, int *);
+
+/*! @brief C API of interpolating standard Akima splines: ACM 433.
+ *  @copydetails BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, 
+ *      double *ry, int *err)
+ */
+int
+(*BF_C_intrpl)(int *, double *, double *, int *, double *, double *, int *);
+
+/*! @brief C API of interpolating optimised Akima splines: ACM 697.
+ *  @copydetails BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, 
+ *      double *rx, double *ry, int *err)
+ */
+int
+(*BF_C_uvip3p)(int *, int *, double *, double *, int *, double *, double *, 
+               int *);
 //>--------------------------------------------------------------------------<//
 
 //>-INTERFACE----------------------------------------------------------------<//
+/*! @brief Import macro for C API of Lawson's and Hanson's non-negative least 
+ *      squares (NNLS).
+ */
 #define API_BF_C_nnls                                                          \
     BF_C_nnls = (int(*)(double*,int*,int*,int*,double*,double*,double*,double*,\
         double*,int*,int*,int*)) R_GetCCallable("bnxFortran", "BF_C_nnls")
 
+/*! @brief Import macro for C API of interpolating standard Akima splines: 
+ *      ACM 433.
+ */
 #define API_BF_C_intrpl                                                        \
     BF_C_intrpl = (int(*)(int*,double*,double*,int*,double*,double*,int*))     \
         R_GetCCallable("bnxFortran", "BF_C_intrpl")
 
+/*! @brief Import macro for C API of interpolating optimised Akima splines: 
+ *      ACM 697.
+ */
 #define API_BF_C_uvip3p                                                        \
     BF_C_uvip3p = (int(*)(int*,int*,double*,double*,int*,double*,double*,int*))\
         R_GetCCallable("bnxFortran", "BF_C_uvip3p")

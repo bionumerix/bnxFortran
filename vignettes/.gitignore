@@ -1,4 +1,5 @@
 figures
 *.html
-*.R
+*.pdf
 *.md
+*.R
