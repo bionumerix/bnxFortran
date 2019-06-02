@@ -17,13 +17,13 @@ reading <https://www.tidyverse.org/help/#reprex>.
 
 ---
 
-### Expected Behavior
+### Expected Behaviour
 
 ``` r
 # Please write here
 ```
 
-### Actual Behavior
+### Actual Behaviour
 
 ``` r
 # Please write here

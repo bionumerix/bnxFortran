@@ -56,8 +56,8 @@ when reporting an issue.
 
 This package is released under the [GPL-3](http://www.gnu.org/licenses/gpl.html)
 (or later). Thus, your contribution must be either under this or a compatible
-licence! For simplification, we prefer contributions under the GPL (>= 3)
-licence terms and generally assume this license unless explicitly stated.
+license! For simplification, we prefer contributions under the GPL (>= 3)
+license terms and generally assume this license unless explicitly stated.
 
 ## Coding Styles
 

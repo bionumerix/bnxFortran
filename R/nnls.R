@@ -1,4 +1,4 @@
-#' The Lawson-Hanson NNLS Implemention of Non-Negative Least Squares
+#' The Lawson-Hanson NNLS Implementation of Non-Negative Least Squares
 #'
 #' An R interface to the Lawson-Hanson NNLS implementation of an algorithm for
 #' non-negative linear least squares. For details see \code{\link[nnls]{nnls}}.

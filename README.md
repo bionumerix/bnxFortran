@@ -18,7 +18,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 ## Overview
 
-**Git-Version:** 0.1.1
+**Git-Version:** 0.1.2
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called
@@ -40,7 +40,7 @@ This package has been created with at least two main purposes in mind:
 Currently, the following *Fortran* algorithms are wrapped and can be
 called from C/C++ source code within other packages (`src`) source code:
 
-  - `nnls`: the Lawson-Hanson NNLS implemention of non-negative least
+  - `nnls`: the Lawson-Hanson NNLS implementation of non-negative least
     squares written by CL Lawson & RJ Hanson (1995) with modifications
     by KM Mullen & IHM van Stokkum (CRAN
     [nnls](https://cran.r-project.org/web/packages/nnls/index.html)).

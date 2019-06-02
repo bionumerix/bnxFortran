@@ -3,7 +3,7 @@
 \name{nnls-interface}
 \alias{nnls-interface}
 \alias{.nnls}
-\title{The Lawson-Hanson NNLS Implemention of Non-Negative Least Squares}
+\title{The Lawson-Hanson NNLS Implementation of Non-Negative Least Squares}
 \usage{
 .nnls(A, b, callby = c("C", "Fortran"))
 }

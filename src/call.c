@@ -1,6 +1,6 @@
 /*!*****************************************************************************
  * @file
- * @brief     R2C-Interface: fortran wrapper call routines.
+ * @brief     R2C-Interface: Fortran wrapper call routines.
  * @authors   Dirk Steinhauser and other contributors.
  * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
