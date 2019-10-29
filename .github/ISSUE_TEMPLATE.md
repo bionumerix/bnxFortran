@@ -35,12 +35,6 @@ reading <https://www.tidyverse.org/help/#reprex>.
 # Please write here
 ```
 
-### Screenshot on this Problem (if possible)
-
-``` r
-# Please write here
-```
-
 ### Your Environment
 
 ``` r

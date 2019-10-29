@@ -1,63 +1,63 @@
 Package: bnxFortran
 Type: Package
 Title: BNX Interface Package for R2C Callable Fortran Routines
-Version: 0.1.2
+Version: 0.1.3
 Date: 2019-02-09
 Authors@R: c(
-      person("Dirk", "Steinhauser",
-             email   = "steinhauser@bionumerix.org",
-             role    = c("aut", "cre", "cph"),
-             comment = c(ORCID = "0000-0001-7792-2896")
-      ),
-      person(family  = "R Core Team",
-             role    = c("ctb", "cph"), 
-             comment = "R interface call examples."
-      ),
-      person("Hiroshi", "Akima", 
-             role    = c("ctb", "cph"),
-             comment = c("Fortran code (TOMS 697 and 433).",
-                         "See 'akima' R package.")
-      ),
-      person("Albrecht", "Gebhardt", 
-             role    = c("ctb", "cph"),
-             comment = c("R port (interp* functions).",
-                         "See 'akima' R package.")
-      ),
-      person("Thomas", "Petzold",
-             role    = c("ctb", "cph"),
-             comment = c("The aspline function.",
-                         "See 'akima' R package.")
-      ),
-      person("Martin", "Maechler",
-             role    = c("ctb", "cph"), 
-             comment = c("The interp2xyz function + enhancements.",
-                         "See 'akima' R package.")
-      ),
-      person("YYYY Association for Computing Machinery, Inc.",
-             role    = c("cph"), 
-             comment = c("Covers code from TOMS 697 and 433.",
-                         "See 'akima' R package.")
-      ),
-      person("Katharine M.", "Mullen",
-             role    = c("ctb", "cph"), 
-             comment = c("The nnls R and Fortran functions.",
-                         "See 'nnls' R package.")
-      ),
-      person("Ivo H. M.", "van Stokkum",
-             role    = c("ctb", "cph"), 
-             comment = c("The nnls R and Fortran functions.",
-                         "See 'nnls' R package.")
-      ),
-      person("Charles L.", "Lawson",
-             role    = c("ctb", "cph"), 
-             comment = c("The nnls Fortran function.",
-                         "See 'nnls' R package.")
-      ),
-      person("Richard J.", "Hanson",
-             role    = c("ctb", "cph"), 
-             comment = c("The nnls Fortran function.",
-                         "See 'nnls' R package.")
-      )
+        person("Dirk", "Steinhauser",
+               email   = "steinhauser@bionumerix.org",
+               role    = c("aut", "cre", "cph"),
+               comment = c(ORCID = "0000-0001-7792-2896")
+        ),
+        person(family  = "R Core Team",
+               role    = c("ctb", "cph"), 
+               comment = "R interface call examples."
+        ),
+        person("Hiroshi", "Akima", 
+               role    = c("ctb", "cph"),
+               comment = c("Fortran code (TOMS 697 and 433).",
+                           "See 'akima' R package.")
+        ),
+        person("Albrecht", "Gebhardt", 
+               role    = c("ctb", "cph"),
+               comment = c("R port (interp* functions).",
+                           "See 'akima' R package.")
+        ),
+        person("Thomas", "Petzold",
+               role    = c("ctb", "cph"),
+               comment = c("The aspline function.",
+                           "See 'akima' R package.")
+        ),
+        person("Martin", "Maechler",
+               role    = c("ctb", "cph"), 
+               comment = c("The interp2xyz function + enhancements.",
+                           "See 'akima' R package.")
+        ),
+        person("YYYY Association for Computing Machinery, Inc.",
+               role    = c("cph"), 
+               comment = c("Covers code from TOMS 697 and 433.",
+                           "See 'akima' R package.")
+        ),
+        person("Katharine M.", "Mullen",
+               role    = c("ctb", "cph"), 
+               comment = c("The nnls R and Fortran functions.",
+                           "See 'nnls' R package.")
+        ),
+        person("Ivo H. M.", "van Stokkum",
+               role    = c("ctb", "cph"), 
+               comment = c("The nnls R and Fortran functions.",
+                           "See 'nnls' R package.")
+        ),
+        person("Charles L.", "Lawson",
+               role    = c("ctb", "cph"), 
+               comment = c("The nnls Fortran function.",
+                           "See 'nnls' R package.")
+        ),
+        person("Richard J.", "Hanson",
+               role    = c("ctb", "cph"), 
+               comment = c("The nnls Fortran function.",
+                           "See 'nnls' R package.")
+        )
     )
 Description: The 'bnxFortran' package provides some C functions that wrap 
     Fortran algorithms. These interface functions are implemented here to be 

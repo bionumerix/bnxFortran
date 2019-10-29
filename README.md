@@ -18,7 +18,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 ## Overview
 
-**Git-Version:** 0.1.2
+**Git-Version:** 0.1.3
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called
@@ -30,7 +30,7 @@ This package has been created with at least two main purposes in mind:
 
   - Using R’s `R_RegisterCCallable` to enable function calling at the
     the source code (`src`) level of other R packages.
-  - Placing all *Fortran* algorithms needed by the *BioNumeriX (BNX)* R
+  - Placing all *Fortran* algorithms needed by the *Bionumerix (BNX)* R
     packages and associated C/C++ wrapper functions at a central place
     for maintenance and reusability.
   - … (etc.).
@@ -78,9 +78,8 @@ devtools::install_github("bionumerix/bnxFortran")
 ```
 
 Alternatively, you can install the release of the latest development
-version from the *BioNumeriX (BNX)* R repository (only Linux and
-Windows)
-via:
+version from the *Bionumerix (BNX)* R repository (only Linux and
+Windows) via:
 
 ``` r
 install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
@@ -109,7 +108,7 @@ bug. The easier a potential bug can be reproduced, the faster a solution
 will be in place. Please check out the [project issue
 template](.github/ISSUE_TEMPLATE.md) for further details.
 
-In case of questions, missing functions, todo’s etc. please open an
+In case of questions, enhancements and extensions etc. please open an
 issue with appropriate / respective label at the above-mentioned issue
 page.
 

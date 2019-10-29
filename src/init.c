@@ -2,7 +2,7 @@
  * @file
  * @brief     R2C-Interface: entry point definitions and routine registrations.
  * @authors   Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 BioNumeriX (BNX) and authors. \n
+ * @copyright (C) 2018 - 2019 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @association
  *      This file is part of the bnxFortran R package.
@@ -48,7 +48,8 @@ __declspec(dllexport)
 #    pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #  endif
 #endif
-/*! @brief Entry points for  \c .Call interface.
+/** 
+ * @brief Entry points for  \c .Call interface.
  */
 static const R_CMethodDef CEntries[] = {
     // func
@@ -58,7 +59,8 @@ static const R_CMethodDef CEntries[] = {
     // null
     {NULL, NULL, 0}
 };
-/*! @brief Entry points for \c .Fortran interface.
+/**
+ * @brief Entry points for \c .Fortran interface.
  */
 static const R_FortranMethodDef FortEntries[] = {
     // func
@@ -76,7 +78,8 @@ static const R_FortranMethodDef FortEntries[] = {
 //>--------------------------------------------------------------------------<//
 
 //>-Registration-------------------------------------------------------------<//
-/*! @brief Register routine for C and Fortran to R interface.
+/** 
+ * @brief Register routine for C and Fortran to R interface.
  */
 void attribute_visible R_init_bnxFortran(DllInfo *info) {
     // Register routines for .C, .Call, and .Fortran interface.
@@ -97,7 +100,8 @@ void attribute_visible R_init_bnxFortran(DllInfo *info) {
 #  endif
 #endif
 
-/*! @brief Release resources.
+/**
+ * @brief Release resources.
  */
 // # nocov start
 void attribute_visible R_unload_bnxFortran(DllInfo *info) {
@@ -111,7 +115,7 @@ void attribute_visible R_unload_bnxFortran(DllInfo *info) {
 #endif
 //>--------------------------------------------------------------------------<//
 
-//>-UNDEFS-------------------------------------------------------------------<//
+//>-UNDEF--------------------------------------------------------------------<//
 #undef _CDEF
 #undef _FDEF
 #undef _CALLDEF

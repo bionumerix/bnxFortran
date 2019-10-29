@@ -28,8 +28,7 @@ Please find below some advices and suggestions:
   within the `testthat` of this package.
 
 * Always avoid platform specific code to assure that this package builds and
-  checks under Windows, Linux and OSX. Pull requests will also be checked by
-  via <https://travis-ci.org/>, <https://ci.appveyor.com/> and maybe more.
+  checks under Windows, Linux and OSX. Pull requests will also be checked via <https://travis-ci.org/>, <https://ci.appveyor.com/> and maybe more.
 
 * Please follow the coding style used in the package. See below for further
   details.

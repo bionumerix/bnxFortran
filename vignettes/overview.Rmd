@@ -8,4 +8,4 @@ vignette: >
 ---
 
 Currently under development. In the meantime, use the examples via `?bnxFortran`
-and links etc. therein.
+(or `help("bnxFortran")`) and links etc. therein.
