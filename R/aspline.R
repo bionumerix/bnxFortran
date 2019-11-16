@@ -4,8 +4,12 @@
 #' points. For details see \code{\link[akima]{aspline}}.
 #'
 #' @name aspline-interface
-#' @inheritParams akima::aspline
 #' @inheritParams argCallby
+#' @inheritParams akima::aspline
+#' @param x A vector giving the coordinates of the points to be interpolated.
+#'   Alternatively a single plotting structure can be specified: see
+#'   \code{\link[grDevices]{xy.coords}}.
+#' @param y Same as for argument \code{x}.
 #' @author Credit: This function is based on the \code{\link[akima]{aspline}}
 #'   functions from \strong{package::akima} by Albrecht Gebhardt \emph{et al.}.
 #'   Some minor modifications have been made to evaluate the results from the

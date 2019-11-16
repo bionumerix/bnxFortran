@@ -1,4 +1,3 @@
---------------------------------------------------------------------------------
 Copyright (C) 2018 - 2019 Dirk Steinhauser and other contributors.
 Copyright (C) 2018 - 2019 Bionumerix (BNX).
 Third party copyrights are property of their respective owners.
@@ -32,9 +31,9 @@ license below.
 
 
 
-GPL-3 license:
---------------------------------------------------------------------------------
-
+##>--------------------------------------------------------------------------<##
+## GPL-3 license                                                              ##
+##>--------------------------------------------------------------------------<##
 
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
@@ -713,8 +712,9 @@ Public License instead of this License.  But first, please read
 
 
 
-GPL-2 license: R-project + GPL-2 R packages
---------------------------------------------------------------------------------
+##>--------------------------------------------------------------------------<##
+## GPL-2 license: R-project + GPL-2 R packages                                ##
+##>--------------------------------------------------------------------------<##
 
         GNU GENERAL PUBLIC LICENSE
            Version 2, June 1991
@@ -1059,8 +1059,9 @@ Public License instead of this License.
 
 
 
-'akima': ACM
---------------------------------------------------------------------------------
+##>--------------------------------------------------------------------------<##
+## 'akima': ACM                                                               ##
+##>--------------------------------------------------------------------------<##
 
 This package is distributed under the ACM license at
 http://www.acm.org/publications/policies/software-copyright-notice

@@ -18,7 +18,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 ## Overview
 
-**Git-Version:** 0.1.3
+**Git-Version:** 0.1.4
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called
@@ -72,8 +72,9 @@ you can install this package from GitHub using:
 ## Installation from source gets you the latest (developmental) fixes:
 # You may need to pre-install all necessary dependencies (if any is missing).
 # You may need to set `httr::set_config(httr::config(ssl_verifypeer = 0L))`.
-if (!require("devtools"))
+if (!require("devtools")) {
   install.packages("devtools")
+}
 devtools::install_github("bionumerix/bnxFortran")
 ```
 
@@ -102,7 +103,7 @@ Third party copyrights are property of their respective owners.
 
 Regarding bug reports, please open an issue at the respective repository
 issue site at
-[…/issues/new](https://github.com/bionumerix/bnxFortran/issues/new).
+[…/issues/new](https://github.com/bionumerix/bnxFortran/issues).
 Please include an example that can be used to reproduce the error or
 bug. The easier a potential bug can be reproduced, the faster a solution
 will be in place. Please check out the [project issue
@@ -132,14 +133,10 @@ such as other R packages. The authors of the functions or packages used
 are listed here as contributors. For details and complete list lookup
 the [license](./LICENSE) file and the source code of this package too.
 
-  - Dirk Steinhauser
-
-with contributions by:
-
-  - Hiroshi Akima, Albrecht Gebhardt, Thomas Petzold, Martin Maechler
-  - Katharine M. Mullen, Ivo H. M. van Stokkum, Charles L. Lawson,
-    Richard J. Hanson
-  - R Development Core Team / R Foundation
+Dirk Steinhauser, with contributions by Hiroshi Akima, Albrecht
+Gebhardt, Thomas Petzold, Martin Maechler, Katharine M. Mullen, Ivo H.
+M. van Stokkum, Charles L. Lawson, Richard J. Hanson and the Development
+Core Team / R Foundation.
 
 -----
 

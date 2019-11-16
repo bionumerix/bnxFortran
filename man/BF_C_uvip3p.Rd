@@ -52,11 +52,13 @@ double}, int})) R_GetCCallable("bnxFortran", "BF_C_uvip3p");}
 }
 
 \seealso{
-Other callable: \code{\link{BF_C_intrpl}},
-  \code{\link{BF_C_nnls}},
-  \code{\link{bnxFortran-callable}}
+Other callable: 
+\code{\link{BF_C_intrpl}},
+\code{\link{BF_C_nnls}},
+\code{\link{bnxFortran-callable}}
 
-Other akima-callable: \code{\link{BF_C_intrpl}}
+Other akima-callable: 
+\code{\link{BF_C_intrpl}}
 }
 \concept{akima-callable}
 \concept{callable}

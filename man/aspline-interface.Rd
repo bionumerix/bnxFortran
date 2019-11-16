@@ -5,18 +5,23 @@
 \alias{.aspline}
 \title{Univariate Akima Interpolation}
 \usage{
-.aspline(x, y = NULL, xout, n = 50, ties = mean,
-  method = c("original", "improved"), degree = 3, callby = c("C",
-  "Fortran"))
+.aspline(
+  x,
+  y = NULL,
+  xout,
+  n = 50,
+  ties = mean,
+  method = c("original", "improved"),
+  degree = 3,
+  callby = c("C", "Fortran")
+)
 }
 \arguments{
-\item{x}{vectors giving the coordinates of the points to be
-    interpolated.  Alternatively a single plotting structure can be
-    specified: see \code{\link{xy.coords}}.}
+\item{x}{A vector giving the coordinates of the points to be interpolated.
+Alternatively a single plotting structure can be specified: see
+\code{\link[grDevices]{xy.coords}}.}
 
-\item{y}{vectors giving the coordinates of the points to be
-    interpolated.  Alternatively a single plotting structure can be
-    specified: see \code{\link{xy.coords}}.}
+\item{y}{Same as for argument \code{x}.}
 
 \item{xout}{an optional set of values specifying where interpolation
     is to take place.}

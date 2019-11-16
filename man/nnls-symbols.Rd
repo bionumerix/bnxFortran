@@ -15,9 +15,10 @@ For details see: \code{\link[=nnls-interface]{.nnls}}.
 }
 
 \seealso{
-Other interfaces: \code{\link{akima-symbols}},
-  \code{\link{bnxFortran-callable}},
-  \code{\link{bnxFortran-interface}}
+Other interfaces: 
+\code{\link{akima-symbols}},
+\code{\link{bnxFortran-callable}},
+\code{\link{bnxFortran-interface}}
 }
 \concept{interfaces}
 \keyword{internal}

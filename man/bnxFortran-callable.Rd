@@ -10,12 +10,15 @@ argument validation, except otherwise stated, shall usually be done by the
 caller.
 }
 \seealso{
-Other interfaces: \code{\link{akima-symbols}},
-  \code{\link{bnxFortran-interface}},
-  \code{\link{nnls-symbols}}
+Other interfaces: 
+\code{\link{akima-symbols}},
+\code{\link{bnxFortran-interface}},
+\code{\link{nnls-symbols}}
 
-Other callable: \code{\link{BF_C_intrpl}},
-  \code{\link{BF_C_nnls}}, \code{\link{BF_C_uvip3p}}
+Other callable: 
+\code{\link{BF_C_intrpl}},
+\code{\link{BF_C_nnls}},
+\code{\link{BF_C_uvip3p}}
 }
 \concept{callable}
 \concept{interfaces}

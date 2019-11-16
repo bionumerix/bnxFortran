@@ -77,8 +77,9 @@ install this package from GitHub using:
 ## Installation from source gets you the latest (developmental) fixes:
 # You may need to pre-install all necessary dependencies (if any is missing).
 # You may need to set `httr::set_config(httr::config(ssl_verifypeer = 0L))`.
-if (!require("devtools"))
+if (!require("devtools")) {
   install.packages("devtools")
+}
 devtools::install_github("bionumerix/bnxFortran")
 ```
 
@@ -104,11 +105,10 @@ Third party copyrights are property of their respective owners.
 ## Support
 
 Regarding bug reports, please open an issue at the respective repository issue
-site at [.../issues/new](https://github.com/bionumerix/bnxFortran/issues/new).
-Please include an example that can be used to reproduce the error or bug. The
-easier a potential bug can be reproduced, the faster a solution will be in
-place. Please check out the [project issue template](.github/ISSUE_TEMPLATE.md)
-for further details.
+site at [.../issues/new][ISSUE]. Please include an example that can be used to
+reproduce the error or bug. The easier a potential bug can be reproduced, the
+faster a solution will be in place. Please check out the
+[project issue template](.github/ISSUE_TEMPLATE.md) for further details.
 
 In case of questions, enhancements and extensions etc. please open an issue
 with appropriate / respective label at the above-mentioned issue page.
@@ -133,17 +133,15 @@ other R packages. The authors of the functions or packages used are listed here
 as contributors. For details and complete list lookup the [license](./LICENSE)
 file and the source code of this package too.
 
-- Dirk Steinhauser
-
-with contributions by:
-
-- Hiroshi Akima, Albrecht Gebhardt, Thomas Petzold, Martin Maechler
-- Katharine M. Mullen, Ivo H. M. van Stokkum, Charles L. Lawson, Richard J.
-  Hanson
-- R Development Core Team / R Foundation
+Dirk Steinhauser, with contributions by Hiroshi Akima, Albrecht Gebhardt,
+Thomas Petzold, Martin Maechler, Katharine M. Mullen, Ivo H. M. van Stokkum,
+Charles L. Lawson, Richard J. Hanson and the Development Core Team / R
+Foundation.
 
 -----
 
 Please note that this project is released with a [Contributor Code of
 Conduct](.github/CODE_OF_CONDUCT.md). By participating in this project
 you agree to abide by its terms.
+
+[ISSUE]: https://github.com/bionumerix/bnxFortran/issues

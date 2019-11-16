@@ -9,9 +9,10 @@ functions used within this package. These functions shall not be called
 directly as their interface may change in future releases.
 }
 \seealso{
-Other interfaces: \code{\link{akima-symbols}},
-  \code{\link{bnxFortran-callable}},
-  \code{\link{nnls-symbols}}
+Other interfaces: 
+\code{\link{akima-symbols}},
+\code{\link{bnxFortran-callable}},
+\code{\link{nnls-symbols}}
 }
 \concept{interfaces}
 \keyword{internal}

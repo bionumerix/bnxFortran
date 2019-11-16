@@ -16,9 +16,10 @@ For details see: \code{\link[=aspline-interface]{.aspline}}.
 }
 
 \seealso{
-Other interfaces: \code{\link{bnxFortran-callable}},
-  \code{\link{bnxFortran-interface}},
-  \code{\link{nnls-symbols}}
+Other interfaces: 
+\code{\link{bnxFortran-callable}},
+\code{\link{bnxFortran-interface}},
+\code{\link{nnls-symbols}}
 }
 \concept{interfaces}
 \keyword{internal}

@@ -69,9 +69,10 @@ int})) R_GetCCallable("bnxFortran", "BF_C_nnls");}
 }
 
 \seealso{
-Other callable: \code{\link{BF_C_intrpl}},
-  \code{\link{BF_C_uvip3p}},
-  \code{\link{bnxFortran-callable}}
+Other callable: 
+\code{\link{BF_C_intrpl}},
+\code{\link{BF_C_uvip3p}},
+\code{\link{bnxFortran-callable}}
 }
 \concept{callable}
 \concept{nnls-callable}
