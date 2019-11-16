@@ -65,12 +65,13 @@ Description: The 'bnxFortran' package provides some C functions that wrap
 URL: https://github.com/bionumerix/bnxFortran
 BugReports: https://github.com/bionumerix/bnxFortran/issues/new
 License: GPL (>= 3) + file LICENSE
-Depends: R (>= 3.3)
-Imports: utils, grDevices
-Suggests: covr, testthat, knitr, markdown, rmarkdown, akima, nnls
+Depends: R (>= 3.5)
+Imports: grDevices, utils
+Suggests: akima, covr, knitr, markdown, nnls, rmarkdown, testthat
 Encoding: UTF-8
 LazyLoad: yes
 NeedsCompilation: yes
 VignetteBuilder: knitr
+SystemRequirements: GNU make, pandoc
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
 RoxygenNote: 7.0.0
