@@ -1,4 +1,5 @@
 # exclude everything (folders and files)
+checkup/*
 doxygen/*
 doc/
 

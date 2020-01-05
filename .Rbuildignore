@@ -52,4 +52,5 @@
 
 ## inst-dir:
 ^Doxyfile$
-^inst/doxy$
+^inst/checkup$
+^inst/doxygen$

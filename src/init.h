@@ -1,8 +1,8 @@
 /*!*****************************************************************************
  * @file
  * @brief R2C-Interface: entry point definitions and routine registrations.
- * @authors Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 Bionumerix (BNX) and authors. \n
+ * @authors Dirk Steinhauser and R Core Team.
+ * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,28 +24,36 @@
 #ifndef SRC_INIT_H
 #define SRC_INIT_H
 
+
 //>-HEADERS------------------------------------------------------------------<//
 #if __GNUC__
 #  pragma GCC diagnostic push
 #  pragma GCC diagnostic ignored "-Wstrict-prototypes"
 #  pragma GCC diagnostic ignored "-Wredundant-decls"
-#  pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif
-#include <R.h>
-#include <Rinternals.h>
-#include <Rdefines.h>
-#include <R_ext/Applic.h>
-#include <R_ext/Lapack.h>
-#include <R_ext/Rdynload.h>
-#include <R_ext/Visibility.h>
+#include <R.h>                 // for 
+#include <Rinternals.h>        // for 
+#include <R_ext/Rdynload.h>    // for DllInfo, R_RegisterCCallable, R_CMethodDef
+#include <R_ext/Visibility.h>  // for attribute_visible
 #if __GNUC__
 #  pragma GCC diagnostic pop
 #endif
 //>--------------------------------------------------------------------------<//
 
+
 //>-Registration-------------------------------------------------------------<//
+
+/**
+ * Register routine for C and Fortran to R interface.
+ */
 void attribute_visible R_init_bnxFortran(DllInfo*);
+
+/**
+ * Release resources.
+ */
 void attribute_visible R_unload_bnxFortran(DllInfo*);
+
 //>--------------------------------------------------------------------------<//
+
 
 #endif /* SRC_INIT_H */

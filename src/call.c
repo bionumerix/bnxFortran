@@ -1,8 +1,8 @@
 /*!*****************************************************************************
  * @file
  * @brief R2C-Interface: Fortran wrapper call routines.
- * @authors Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 Bionumerix (BNX) and authors. \n
+ * @authors Dirk Steinhauser.
+ * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -21,52 +21,34 @@
  *      along with bnxFortran.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
 
+
 //>-HEADERS------------------------------------------------------------------<//
 #include "call.h"
 //>--------------------------------------------------------------------------<//
 
+
 //>-Wrapper------------------------------------------------------------------<//
-/** 
- * @brief C wrapper of Lawson's and Hanson's non-negative least squares (NNLS).
- * @copydetails nnls()
- */
+
 int
 BF_C_nnls(double *A, int *MDA, int *M, int *N, double *B, double *X,
           double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE, 
-          int *NSETP) {
+          int *NSETP)
+{
     return F77_CALL(nnls)(A, MDA, M, N, B, X, RNORM, W, ZZ, INDEX, MODE, NSETP);
 }
 
-/** 
- * @brief C wrapper for interpolating standard Akima splines: ACM 433.
- * @param[in] n The number of input data points. Must be 2 or greater.
- * @param[in] x An array of dimension \c l storing the x-values (abscissas) of
- *      input data points in ascending order.
- * @param[in] y An array of dimension \c l storing the y-values (ordinates) of
- *      input data points.
- * @param[in] rn The number of points at which interpolation of the y-value
- *      (ordinate) is desired. Must be 1 or greater.
- * @param[in] rx An array of dimension \c rn for the x-values (abscissas) of
- *      desired points.
- * @param[in,out] ry An array of dimension \c rn where the interpolated
- *      y-values (ordinates) are to be displayed.
- * @param[in,out] err An error code.
- */
 int
 BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, double *ry,
-            int *err) {
+            int *err)
+{
     return F77_CALL(intrpl)(n, x, y, rn, rx, ry, err);
 }
 
-/**
- * @brief C wrapper for interpolating optimised Akima splines: ACM 697.
- * @param[in] np The degree of the polynomials for the interpolating function.
- * @copydetails BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, 
- *      double *ry, int *err)
- */
 int
 BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
-            double *ry, int *err) {
+            double *ry, int *err)
+{
     return F77_CALL(uvip3p)(np, n, x, y, rn, rx, ry, err);
 }
+
 //>--------------------------------------------------------------------------<//

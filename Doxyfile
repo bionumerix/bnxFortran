@@ -942,8 +942,7 @@ EXCLUDE_PATTERNS       = *memwatch* \
 # Note that the wildcards are matched against the file with absolute path, so to
 # exclude all test directories use the pattern */test/*
 
-EXCLUDE_SYMBOLS        = _* \
-                         UT_* \
+EXCLUDE_SYMBOLS        = UT_* \
                          clean* \
                          set* \
                          get* \

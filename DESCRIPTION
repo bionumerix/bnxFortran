@@ -1,7 +1,7 @@
 Package: bnxFortran
 Type: Package
 Title: BNX Interface Package for R2C Callable Fortran Routines
-Version: 0.1.4
+Version: 0.1.5
 Date: 2019-02-09
 Authors@R: c(
         person("Dirk", "Steinhauser",
@@ -74,4 +74,4 @@ NeedsCompilation: yes
 VignetteBuilder: knitr
 SystemRequirements: GNU make, pandoc
 Roxygen: list(markdown = TRUE, roclets = c("rd", "namespace", "collate"))
-RoxygenNote: 7.0.0
+RoxygenNote: 7.0.2

@@ -1,8 +1,8 @@
 /*!*****************************************************************************
  * @file
  * @brief R2C-Interface: function argument definitions.
- * @authors Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 Bionumerix (BNX) and authors. \n
+ * @authors Dirk Steinhauser.
+ * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,13 +24,17 @@
 #ifndef SRC_ARGS_H_
 #define SRC_ARGS_H_
 
+
 //>-HEADERS------------------------------------------------------------------<//
-#include "init.h"
+#include <Rinternals.h>      // for ...SXP
+#include <R_ext/Rdynload.h>  // for R_NativePrimitiveArgType
 //>--------------------------------------------------------------------------<//
 
+
 //>-ARGUMENTS/NNLS-----------------------------------------------------------<//
+
 /**
- * @brief Variable for R's argument type definition for NNLS function.
+ * Variable for R's argument type definition for NNLS function.
  */
 static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
     REALSXP, /* A     */
@@ -46,11 +50,14 @@ static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
     INTSXP,  /* MODE  */
     INTSXP,  /* NSETP */
 };
+
 //>--------------------------------------------------------------------------<//
 
+
 //>-ARGUMENTS/Akima----------------------------------------------------------<//
-/** 
- * @brief Variable for R's argument type definition for akima spline ACM 433.
+
+/**
+ * Variable for R's argument type definition for akima spline ACM 433.
  */
 static R_NativePrimitiveArgType BF_C_intrpl_t[7] = {
     INTSXP,  /* L,  */
@@ -62,8 +69,8 @@ static R_NativePrimitiveArgType BF_C_intrpl_t[7] = {
     INTSXP   /* ERR */
 };
 
-/** 
- * @brief Variable for R's argument type definition for akima spline ACM 697.
+/**
+ * Variable for R's argument type definition for akima spline ACM 697.
  */
 static R_NativePrimitiveArgType BF_C_uvip3p_t[8] = {
     INTSXP,  /* NP, */
@@ -75,6 +82,8 @@ static R_NativePrimitiveArgType BF_C_uvip3p_t[8] = {
     REALSXP, /* YI, */
     INTSXP   /* ERR */
 };
+
 //>--------------------------------------------------------------------------<//
+
 
 #endif /* SRC_ARGS_H_ */

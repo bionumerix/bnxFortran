@@ -83,13 +83,6 @@ if (!require("devtools")) {
 devtools::install_github("bionumerix/bnxFortran")
 ```
 
-Alternatively, you can install the release of the latest development version
-from the *Bionumerix (BNX)* R repository (only Linux and Windows) via:
-
-``` r
-install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
-```
-
 ## License
 
 This package as a whole is distributed under GPL-3 (GNU GENERAL PUBLIC LICENSE

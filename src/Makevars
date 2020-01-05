@@ -4,8 +4,6 @@
 ##>-CONFIG-------------------------------------------------------------------<##
 PKG_LIBS     = $(FLIBS) ## $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
 PKG_CPPFLAGS = -I../inst/include/
-PKG_FFLAGS   = ## -O3 -g -Wall -pedantic -fbounds-check ### F77
-PKG_FCFLAGS  = ## -O3 -g -Wall -pedantic -fbounds-check ### F95
 PKG_CFLAGS   =                                                               \
 #  -O3 -g -Wall                                                               \
 #  -fmessage-length=0 -Wextra -Wmain -Wreturn-type -Wunused -Wformat          \
@@ -13,6 +11,8 @@ PKG_CFLAGS   =                                                               \
 #  -Wformat-nonliteral -pedantic -Wunsafe-loop-optimizations -Woverflow       \
 #  -Winline -Wconversion -Wshadow -Wredundant-decls                           \
 #  -Wmissing-prototypes -Wstrict-prototypes -Wnested-externs
+PKG_FFLAGS   = ## -O3 -g -Wall -pedantic -fbounds-check ### F77
+PKG_FCFLAGS  = ## -O3 -g -Wall -pedantic -fbounds-check ### F95
 ##>--------------------------------------------------------------------------<##
 
 

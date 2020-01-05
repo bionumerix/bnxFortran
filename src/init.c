@@ -1,8 +1,8 @@
 /*!*****************************************************************************
  * @file
  * @brief R2C-Interface: entry point definitions and routine registrations.
- * @authors Dirk Steinhauser and other contributors.
- * @copyright (C) 2018 - 2019 Bionumerix (BNX) and authors. \n
+ * @authors Dirk Steinhauser and R Core Team.
+ * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -21,11 +21,13 @@
  *      along with bnxFortran.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
 
+
 //>-HEADERS------------------------------------------------------------------<//
 #include "init.h"
 #include "args.h"
 #include "call.h"
 //>--------------------------------------------------------------------------<//
+
 
 //>-SPECIAL------------------------------------------------------------------<//
 #if _MSC_VER >= 1000
@@ -33,64 +35,82 @@ __declspec(dllexport)
 #endif
 //>--------------------------------------------------------------------------<//
 
+
 //>-MACROS-------------------------------------------------------------------<//
-#define _CDEF(name)                                                            \
+
+/**
+ * Convenience macro for entry point definition for \c .Call interface.
+ */
+#define PD_CDEF(name)                                                          \
     { #name, (DL_FUNC)&name, sizeof(name##_t) / sizeof(name##_t[0]), name##_t }
-#define _FDEF(name, args)                                                      \
+/**
+ * Convenience macro for entry point definition for \c .Fortran interface.
+ */
+#define PD_FDEF(name, args)                                                    \
     { #name, (DL_FUNC)&F77_SUB(name), sizeof(args) / sizeof(args[0]), args }
-#define _RREGDEF(name) R_RegisterCCallable("bnxFortran", #name, (DL_FUNC)name)
+/**
+ * Convenience macro for registering callable functions.
+ */
+#define PD_RDEF(name) R_RegisterCCallable("bnxFortran", #name, (DL_FUNC)name)
+
 //>--------------------------------------------------------------------------<//
 
+
 //>-EntryPoints--------------------------------------------------------------<//
+
 #ifndef PKG_PRAGMAX
 #  if __GNUC__
 #    pragma GCC diagnostic push
 #    pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #  endif
 #endif
-/** 
- * @brief Entry points for  \c .Call interface.
+
+/**
+ * Entry points for \c .Call interface.
  */
 static const R_CMethodDef CEntries[] = {
     // func
-    _CDEF(BF_C_nnls),
-    _CDEF(BF_C_intrpl),
-    _CDEF(BF_C_uvip3p),
+    PD_CDEF(BF_C_nnls),
+    PD_CDEF(BF_C_intrpl),
+    PD_CDEF(BF_C_uvip3p),
     // null
     {NULL, NULL, 0}
 };
+
 /**
- * @brief Entry points for \c .Fortran interface.
+ * Entry points for \c .Fortran interface.
  */
 static const R_FortranMethodDef FortEntries[] = {
     // func
-    _FDEF(nnls, BF_C_nnls_t),
-    _FDEF(intrpl, BF_C_intrpl_t),
-    _FDEF(uvip3p, BF_C_uvip3p_t),
+    PD_FDEF(nnls, BF_C_nnls_t),
+    PD_FDEF(intrpl, BF_C_intrpl_t),
+    PD_FDEF(uvip3p, BF_C_uvip3p_t),
     // null
     {NULL, NULL, 0}
 };
+
 #ifndef PKG_PRAGMAX
 #  if __GNUC__
 #    pragma GCC diagnostic pop
 #  endif
 #endif
+
 //>--------------------------------------------------------------------------<//
 
+
 //>-Registration-------------------------------------------------------------<//
-/** 
- * @brief Register routine for C and Fortran to R interface.
- */
-void attribute_visible R_init_bnxFortran(DllInfo *info) {
+
+void attribute_visible R_init_bnxFortran(DllInfo *info)
+{
     // Register routines for .C, .Call, and .Fortran interface.
     R_registerRoutines(info, CEntries, NULL, FortEntries, NULL);
     // If correct entry point not found, signal an error.
     R_useDynamicSymbols(info, FALSE);
     R_forceSymbols(info, TRUE); // call via .Call(.NAME, ...) w/o '"'
     // Register C routines to be called from other packages.
-    _RREGDEF(BF_C_nnls);
-    _RREGDEF(BF_C_intrpl);
-    _RREGDEF(BF_C_uvip3p);
+    PD_RDEF(BF_C_nnls);
+    PD_RDEF(BF_C_intrpl);
+    PD_RDEF(BF_C_uvip3p);
 }
 
 #ifndef PKG_PRAGMAX
@@ -99,12 +119,9 @@ void attribute_visible R_init_bnxFortran(DllInfo *info) {
 #    pragma GCC diagnostic ignored "-Wunused-parameter"
 #  endif
 #endif
-
-/**
- * @brief Release resources.
- */
 // # nocov start
-void attribute_visible R_unload_bnxFortran(DllInfo *info) {
+void attribute_visible R_unload_bnxFortran(DllInfo *info)
+{
   // Release resources.
 }
 // # nocov end
@@ -113,7 +130,9 @@ void attribute_visible R_unload_bnxFortran(DllInfo *info) {
 #    pragma GCC diagnostic pop
 #  endif
 #endif
+
 //>--------------------------------------------------------------------------<//
+
 
 //>-UNDEF--------------------------------------------------------------------<//
 #undef _CDEF

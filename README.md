@@ -18,7 +18,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 ## Overview
 
-**Git-Version:** 0.1.4
+**Git-Version:** 0.1.5
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called
@@ -76,14 +76,6 @@ if (!require("devtools")) {
   install.packages("devtools")
 }
 devtools::install_github("bionumerix/bnxFortran")
-```
-
-Alternatively, you can install the release of the latest development
-version from the *Bionumerix (BNX)* R repository (only Linux and
-Windows) via:
-
-``` r
-install.packages("bnxFortran", repos = "http://bionumerix.github.io/drat")
 ```
 
 ## License
