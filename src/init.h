@@ -26,30 +26,38 @@
 
 
 //>-HEADERS------------------------------------------------------------------<//
-#if __GNUC__
-#  pragma GCC diagnostic push
-#  pragma GCC diagnostic ignored "-Wstrict-prototypes"
-#  pragma GCC diagnostic ignored "-Wredundant-decls"
+
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
+#    pragma GCC diagnostic push
+#    pragma GCC diagnostic ignored "-Wstrict-prototypes"
+#    pragma GCC diagnostic ignored "-Wredundant-decls"
+#  endif
 #endif
-#include <R.h>                 // for 
-#include <Rinternals.h>        // for 
+
+#include <R.h>                 // for basic R headers
+#include <Rinternals.h>        // for ...SXP
 #include <R_ext/Rdynload.h>    // for DllInfo, R_RegisterCCallable, R_CMethodDef
 #include <R_ext/Visibility.h>  // for attribute_visible
-#if __GNUC__
-#  pragma GCC diagnostic pop
+
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
+#    pragma GCC diagnostic pop
+#  endif
 #endif
+
 //>--------------------------------------------------------------------------<//
 
 
 //>-Registration-------------------------------------------------------------<//
 
 /**
- * Register routine for C and Fortran to R interface.
+ * @brief Register routine for C and Fortran to R interface.
  */
 void attribute_visible R_init_bnxFortran(DllInfo*);
 
 /**
- * Release resources.
+ * @brief Release resources.
  */
 void attribute_visible R_unload_bnxFortran(DllInfo*);
 

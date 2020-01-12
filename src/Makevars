@@ -2,9 +2,11 @@
 
 
 ##>-CONFIG-------------------------------------------------------------------<##
+
 PKG_LIBS     = $(FLIBS) ## $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
 PKG_CPPFLAGS = -I../inst/include/
 PKG_CFLAGS   =                                                               \
+## for development
 #  -O3 -g -Wall                                                               \
 #  -fmessage-length=0 -Wextra -Wmain -Wreturn-type -Wunused -Wformat          \
 #  -Wcast-align -Wcomment -Wuninitialized -Wmissing-declarations -Wno-error   \
@@ -13,10 +15,12 @@ PKG_CFLAGS   =                                                               \
 #  -Wmissing-prototypes -Wstrict-prototypes -Wnested-externs
 PKG_FFLAGS   = ## -O3 -g -Wall -pedantic -fbounds-check ### F77
 PKG_FCFLAGS  = ## -O3 -g -Wall -pedantic -fbounds-check ### F95
+
 ##>--------------------------------------------------------------------------<##
 
 
 ##>-CALLS--------------------------------------------------------------------<##
+
 ### BUILD:
 all:	$(SHLIB) clean
 
@@ -26,4 +30,5 @@ all:	$(SHLIB) clean
 ### CLEAN:
 clean:
 	rm -rf *.o
+
 ##>--------------------------------------------------------------------------<##

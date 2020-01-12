@@ -26,15 +26,17 @@
 
 
 //>-HEADERS------------------------------------------------------------------<//
+
 #include <Rinternals.h>      // for ...SXP
 #include <R_ext/Rdynload.h>  // for R_NativePrimitiveArgType
+
 //>--------------------------------------------------------------------------<//
 
 
 //>-ARGUMENTS/NNLS-----------------------------------------------------------<//
 
 /**
- * Variable for R's argument type definition for NNLS function.
+ * @brief Variable for R's argument type definition for NNLS function.
  */
 static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
     REALSXP, /* A     */
@@ -57,7 +59,7 @@ static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
 //>-ARGUMENTS/Akima----------------------------------------------------------<//
 
 /**
- * Variable for R's argument type definition for akima spline ACM 433.
+ * @brief Variable for R's argument type definition for akima spline ACM 433.
  */
 static R_NativePrimitiveArgType BF_C_intrpl_t[7] = {
     INTSXP,  /* L,  */
@@ -70,7 +72,7 @@ static R_NativePrimitiveArgType BF_C_intrpl_t[7] = {
 };
 
 /**
- * Variable for R's argument type definition for akima spline ACM 697.
+ * @brief Variable for R's argument type definition for akima spline ACM 697.
  */
 static R_NativePrimitiveArgType BF_C_uvip3p_t[8] = {
     INTSXP,  /* NP, */

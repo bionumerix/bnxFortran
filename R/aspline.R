@@ -139,8 +139,7 @@
             "identical x values",
             "x values out of sequence",
             "undefined error code",
-            "undefined err
-            or code",
+            "undefined error code",
             "internal error in Akima Fortran code"
         )
         warning(errl[err])

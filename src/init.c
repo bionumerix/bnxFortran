@@ -23,16 +23,20 @@
 
 
 //>-HEADERS------------------------------------------------------------------<//
+
 #include "init.h"
 #include "args.h"
 #include "call.h"
+
 //>--------------------------------------------------------------------------<//
 
 
 //>-SPECIAL------------------------------------------------------------------<//
+
 #if _MSC_VER >= 1000
 __declspec(dllexport)
 #endif
+
 //>--------------------------------------------------------------------------<//
 
 
@@ -58,8 +62,8 @@ __declspec(dllexport)
 
 //>-EntryPoints--------------------------------------------------------------<//
 
-#ifndef PKG_PRAGMAX
-#  if __GNUC__
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
 #    pragma GCC diagnostic push
 #    pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #  endif
@@ -89,8 +93,8 @@ static const R_FortranMethodDef FortEntries[] = {
     {NULL, NULL, 0}
 };
 
-#ifndef PKG_PRAGMAX
-#  if __GNUC__
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
 #    pragma GCC diagnostic pop
 #  endif
 #endif
@@ -113,20 +117,22 @@ void attribute_visible R_init_bnxFortran(DllInfo *info)
     PD_RDEF(BF_C_uvip3p);
 }
 
-#ifndef PKG_PRAGMAX
-#  if __GNUC__
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
 #    pragma GCC diagnostic push
 #    pragma GCC diagnostic ignored "-Wunused-parameter"
 #  endif
 #endif
+
 // # nocov start
 void attribute_visible R_unload_bnxFortran(DllInfo *info)
 {
   // Release resources.
 }
 // # nocov end
-#ifndef PKG_PRAGMAX
-#  if __GNUC__
+
+#ifndef EXT_PRAGMAX
+#  if defined(__GNUC__) || defined(__CLANG__)
 #    pragma GCC diagnostic pop
 #  endif
 #endif
@@ -135,8 +141,10 @@ void attribute_visible R_unload_bnxFortran(DllInfo *info)
 
 
 //>-UNDEF--------------------------------------------------------------------<//
+
 #undef _CDEF
 #undef _FDEF
 #undef _CALLDEF
 #undef _RREGDEF
+
 //>--------------------------------------------------------------------------<//

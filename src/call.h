@@ -26,15 +26,16 @@
 
 
 //>-HEADERS------------------------------------------------------------------<//
-#include <R_ext/RS.h>  // for F77_NAME, F77_CALL
+
+#include <R_ext/RS.h>  // for F77_NAME, F77_CALL (in .c)
+
 //>--------------------------------------------------------------------------<//
 
 
 //>-Wrapper------------------------------------------------------------------<//
 
 /**
- * C wrapper of Lawson's and Hanson's non-negative least squares (NNLS).
- * 
+ * @brief C wrapper of Lawson's and Hanson's non-negative least squares (NNLS).
  * @copydetails nnls()
  */
 int
@@ -43,8 +44,7 @@ BF_C_nnls(double *A, int *MDA, int *M, int *N, double *B, double *X,
           int *NSETP);
 
 /**
- * C wrapper for interpolating standard Akima splines: ACM 433.
- * 
+ * @brief C wrapper for interpolating standard Akima splines: ACM 433.
  * @param[in] n The number of input data points. Must be 2 or greater.
  * @param[in] x An array of dimension \c l storing the x-values (abscissas) of
  *      input data points in ascending order.
@@ -63,8 +63,7 @@ BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, double *ry,
             int *err);
 
 /**
- * C wrapper for interpolating optimised Akima splines: ACM 697.
- * 
+ * @brief C wrapper for interpolating optimised Akima splines: ACM 697.
  * @param[in] np The degree of the polynomials for the interpolating function.
  * @copydetails BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, 
  *      double *ry, int *err)
@@ -79,8 +78,8 @@ BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
 //>-Extern/NNLS--------------------------------------------------------------<//
 
 /**
- * Fortran function of Lawson's and Hanson's non-negative least squares (NNLS).
- * 
+ * @brief Fortran function of Lawson's and Hanson's non-negative least squares 
+ *      (NNLS).
  * @details This Fortran function is located in file 'xf77.nnls.f' taken from R
  *      package 'nnls' by Katharine M. Mullen and Ivo H. M. van Stokkum (2012).
  *      R package version 1.4. http://CRAN.R-project.org/package=nnls. This is
@@ -123,8 +122,7 @@ F77_NAME(nnls)(double *A, int *MDA, int *M, int *N, double *B, double *X,
 //>-Extern/Akima-------------------------------------------------------------<//
 
 /**
- * Fortran function for interpolating standard Akima splines: ACM 433.
- * 
+ * @brief Fortran function for interpolating standard Akima splines: ACM 433.
  * @details This Fortran function is located in file 'xf77.akima433.f' of the
  *      'akima' package by Hiroshi Akima and Albrecht Gebhardt et al. (2015).
  *      R package version 0.6-2. http://CRAN.R-project.org/package=akima
@@ -146,8 +144,7 @@ F77_NAME(intrpl)(int *l, double *x, double *y, int *n, double *u, double *v,
                  int *err);
 
 /**
- * Fortran function for interpolating optimised Akima splines: ACM 697.
- * 
+ * @brief Fortran function for interpolating optimised Akima splines: ACM 697.
  * @details This Fortran function is located in file 'xf77.akima697.f' of the
  *      'akima' package by Hiroshi Akima and Albrecht Gebhardt et al. (2015).
  *      R package version 0.6-2. http://CRAN.R-project.org/package=akima
