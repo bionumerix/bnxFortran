@@ -2,7 +2,7 @@
  * @file
  * @brief R2C-Interface: entry point definitions and routine registrations.
  * @authors Dirk Steinhauser and R Core Team.
- * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
+ * @copyright (C) 2018-2020 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -21,26 +21,18 @@
  *      along with bnxFortran.  If not, see <http://www.gnu.org/licenses/>.
  ******************************************************************************/
 
-
-//>-HEADERS------------------------------------------------------------------<//
-
 #include "init.h"
 #include "args.h"
 #include "call.h"
-
-//>--------------------------------------------------------------------------<//
-
-
-//>-SPECIAL------------------------------------------------------------------<//
 
 #if _MSC_VER >= 1000
 __declspec(dllexport)
 #endif
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-MACROS-------------------------------------------------------------------<//
+/******************************************************************************\
+* Local Utility Macros: Define                                                 *
+\******************************************************************************/
 
 /**
  * Convenience macro for entry point definition for \c .Call interface.
@@ -57,10 +49,10 @@ __declspec(dllexport)
  */
 #define PD_RDEF(name) R_RegisterCCallable("bnxFortran", #name, (DL_FUNC)name)
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-EntryPoints--------------------------------------------------------------<//
+/******************************************************************************\
+* EntryPoints                                                                  *
+\******************************************************************************/
 
 #ifndef EXT_PRAGMAX
 #  if defined(__GNUC__) || defined(__CLANG__)
@@ -99,10 +91,10 @@ static const R_FortranMethodDef FortEntries[] = {
 #  endif
 #endif
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-Registration-------------------------------------------------------------<//
+/******************************************************************************\
+* Registration                                                                 *
+\******************************************************************************/
 
 void attribute_visible R_init_bnxFortran(DllInfo *info)
 {
@@ -137,14 +129,12 @@ void attribute_visible R_unload_bnxFortran(DllInfo *info)
 #  endif
 #endif
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-UNDEF--------------------------------------------------------------------<//
+/******************************************************************************\
+* Local Utility Macros: Undefine                                               *
+\******************************************************************************/
 
 #undef _CDEF
 #undef _FDEF
 #undef _CALLDEF
 #undef _RREGDEF
-
-//>--------------------------------------------------------------------------<//

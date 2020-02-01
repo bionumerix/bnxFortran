@@ -1,4 +1,6 @@
-##>-package------------------------------------------------------------------<##
+#==============================================================================#
+# Package                                                                      #
+#==============================================================================#
 
 #' bnxFortran: BNX Interface Package for R2C Callable Fortran Routines
 #'
@@ -9,7 +11,7 @@
 #' @name bnxFortran
 #' @details \bold{No S4 methodology allowed here!}
 #' @details See documentation for overview and details.
-#' @author Dirk Steinhauser `<`\email{steinhauser@@bionumerix.org}`>`
+#' @author Dirk Steinhauser `<`\email{steinhauser [at] bionumerix [dot] org}`>`
 #' @author See \code{DESCRIPTION} and \code{README.md} for contributors.
 #' @references See documentation for overview and details.
 #' @keywords package
@@ -19,10 +21,10 @@
 #' @exportPattern "^[[:alpha:]]+"
 NULL
 
-##>--------------------------------------------------------------------------<##
 
-
-##>-arguments----------------------------------------------------------------<##
+#==============================================================================#
+# Arguments                                                                    #
+#==============================================================================#
 
 #' Documentation of Recurring Package Arguments
 #' @name argCallby
@@ -34,5 +36,3 @@ NULL
 #'   on the individual function. Any unambiguous substring can be given.
 #' @keywords internal
 NULL
-
-##>--------------------------------------------------------------------------<##

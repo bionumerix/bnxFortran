@@ -2,7 +2,7 @@
  * @file
  * @brief R2C-Interface: function argument definitions.
  * @authors Dirk Steinhauser.
- * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
+ * @copyright (C) 2018-2020 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,16 +24,13 @@
 #ifndef SRC_ARGS_H_
 #define SRC_ARGS_H_
 
-
-//>-HEADERS------------------------------------------------------------------<//
-
 #include <Rinternals.h>      // for ...SXP
 #include <R_ext/Rdynload.h>  // for R_NativePrimitiveArgType
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-ARGUMENTS/NNLS-----------------------------------------------------------<//
+/******************************************************************************\
+* Arguments: NNLS                                                              *
+\******************************************************************************/
 
 /**
  * @brief Variable for R's argument type definition for NNLS function.
@@ -53,10 +50,10 @@ static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
     INTSXP,  /* NSETP */
 };
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-ARGUMENTS/Akima----------------------------------------------------------<//
+/******************************************************************************\
+* Arguments: Akima                                                             *
+\******************************************************************************/
 
 /**
  * @brief Variable for R's argument type definition for akima spline ACM 433.
@@ -84,8 +81,6 @@ static R_NativePrimitiveArgType BF_C_uvip3p_t[8] = {
     REALSXP, /* YI, */
     INTSXP   /* ERR */
 };
-
-//>--------------------------------------------------------------------------<//
 
 
 #endif /* SRC_ARGS_H_ */

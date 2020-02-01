@@ -2,7 +2,7 @@
  * @file
  * @brief R2C-Interface: Fortran wrapper call routines.
  * @authors Dirk Steinhauser.
- * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
+ * @copyright (C) 2018-2020 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,15 +24,12 @@
 #ifndef SRC_CALL_H
 #define SRC_CALL_H
 
-
-//>-HEADERS------------------------------------------------------------------<//
-
 #include <R_ext/RS.h>  // for F77_NAME, F77_CALL (in .c)
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-Wrapper------------------------------------------------------------------<//
+/******************************************************************************\
+* Wrapper                                                                      *
+\******************************************************************************/
 
 /**
  * @brief C wrapper of Lawson's and Hanson's non-negative least squares (NNLS).
@@ -72,10 +69,10 @@ int
 BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
             double *ry, int *err);
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-Extern/NNLS--------------------------------------------------------------<//
+/******************************************************************************\
+* Extern: NNLS                                                                 *
+\******************************************************************************/
 
 /**
  * @brief Fortran function of Lawson's and Hanson's non-negative least squares 
@@ -116,10 +113,10 @@ F77_NAME(nnls)(double *A, int *MDA, int *M, int *N, double *B, double *X,
                double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE, 
                int *NSETP);
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-Extern/Akima-------------------------------------------------------------<//
+/******************************************************************************\
+* Extern: Akima                                                                *
+\******************************************************************************/
 
 /**
  * @brief Fortran function for interpolating standard Akima splines: ACM 433.
@@ -165,8 +162,6 @@ F77_NAME(intrpl)(int *l, double *x, double *y, int *n, double *u, double *v,
 extern int
 F77_NAME(uvip3p)(int *np, int *nd, double *xd, double *yd, int *ni, double *xi, 
                  double *yi, int *err);
-
-//>--------------------------------------------------------------------------<//
 
 
 #endif /* SRC_CALL_H */

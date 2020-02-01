@@ -2,7 +2,7 @@
  * @file
  * @brief R2C-Interface: entry point definitions and routine registrations.
  * @authors Dirk Steinhauser and R Core Team.
- * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
+ * @copyright (C) 2018-2020 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,9 +24,6 @@
 #ifndef SRC_INIT_H
 #define SRC_INIT_H
 
-
-//>-HEADERS------------------------------------------------------------------<//
-
 #ifndef EXT_PRAGMAX
 #  if defined(__GNUC__) || defined(__CLANG__)
 #    pragma GCC diagnostic push
@@ -46,10 +43,10 @@
 #  endif
 #endif
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-Registration-------------------------------------------------------------<//
+/******************************************************************************\
+* Registration                                                                 *
+\******************************************************************************/
 
 /**
  * @brief Register routine for C and Fortran to R interface.
@@ -60,8 +57,6 @@ void attribute_visible R_init_bnxFortran(DllInfo*);
  * @brief Release resources.
  */
 void attribute_visible R_unload_bnxFortran(DllInfo*);
-
-//>--------------------------------------------------------------------------<//
 
 
 #endif /* SRC_INIT_H */

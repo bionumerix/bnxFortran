@@ -2,7 +2,7 @@
  * @file
  * @brief Assembly header for R package C/C++ interface facilities.
  * @authors Dirk Steinhauser.
- * @copyright (C) 2018-2019 Bionumerix (BNX) and authors. \n
+ * @copyright (C) 2018-2020 Bionumerix (BNX) and authors. \n
  *      Third party copyrights are property of their respective owners.
  * @license
  *      This file is part of bnxFortran.
@@ -24,15 +24,12 @@
 #ifndef BNXFORTRAN_H
 #define BNXFORTRAN_H
 
-
-//>-HEADERS------------------------------------------------------------------<//
-
 #include <R_ext/Rdynload.h>  // for R_GetCCallable
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-CALLABLES----------------------------------------------------------------<//
+/******************************************************************************\
+* Callables                                                                    *
+\******************************************************************************/
 
 //  FROM: ' \*[a-z]*[,][\s]'   TO: '*,'
 /**
@@ -59,10 +56,10 @@ int
 int
 (*BF_C_uvip3p)(int*, int*, double*, double*, int*, double*, double*, int*);
 
-//>--------------------------------------------------------------------------<//
 
-
-//>-INTERFACE----------------------------------------------------------------<//
+/******************************************************************************\
+* Interface                                                                    *
+\******************************************************************************/
 
 /**
  * @brief Import macro for C API of Lawson's and Hanson's non-negative least 
@@ -87,8 +84,6 @@ int
 #define API_BF_C_uvip3p                                                        \
     BF_C_uvip3p = (int(*)(int*,int*,double*,double*,int*,double*,double*,int*))\
         R_GetCCallable("bnxFortran", "BF_C_uvip3p")
-
-//>--------------------------------------------------------------------------<//
 
 
 #endif /* BNXFORTRAN_H */

@@ -17,7 +17,7 @@ See documentation for overview and details.
 See documentation for overview and details.
 }
 \author{
-Dirk Steinhauser \code{<}\email{steinhauser@bionumerix.org}\code{>}
+Dirk Steinhauser \code{<}\email{steinhauser [at] bionumerix [dot] org}\code{>}
 
 See \code{DESCRIPTION} and \code{README.md} for contributors.
 }
