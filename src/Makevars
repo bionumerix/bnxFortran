@@ -1,34 +1,51 @@
 ### -*- Makefile -*- ###
 
-
 #==============================================================================#
 # Config                                                                       #
 #==============================================================================#
 
 PKG_LIBS     = $(FLIBS) ## $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS)
 PKG_CPPFLAGS = -I../inst/include/
-PKG_CFLAGS   =                                                               \
-## for development
-#  -O3 -g -Wall                                                               \
-#  -fmessage-length=0 -Wextra -Wmain -Wreturn-type -Wunused -Wformat          \
-#  -Wcast-align -Wcomment -Wuninitialized -Wmissing-declarations -Wno-error   \
-#  -Wformat-nonliteral -pedantic -Wunsafe-loop-optimizations -Woverflow       \
-#  -Winline -Wconversion -Wshadow -Wredundant-decls                           \
-#  -Wmissing-prototypes -Wstrict-prototypes -Wnested-externs
-PKG_FFLAGS   = ## -O3 -g -Wall -pedantic -fbounds-check ### F77
-PKG_FCFLAGS  = ## -O3 -g -Wall -pedantic -fbounds-check ### F95
-
+PKG_CFLAGS   =                   \
+    -D__USE_MINGW_ANSI_STDIO=1   \
+## Unquote if developing
+#    -DEXT_PRAGMA_IGNORE          \
+#    -std=gnu99 -O3 -g -Wall      \
+#    -fmessage-length=0           \
+#    -fomit-frame-pointer         \
+#    -pedantic                    \
+#    -Wcast-align                 \
+#    -Wcomment                    \
+#    -Wconversion                 \
+#    -Wextra                      \
+#    -Wformat                     \
+#    -Wformat-nonliteral          \
+#    -Winline                     \
+#    -Wmain                       \
+#    -Wmissing-declarations       \
+#    -Wmissing-prototypes         \
+#    -Wnested-externs             \
+#    -Woverflow                   \
+#    -Wredundant-decls            \
+#    -Wreturn-type                \
+#    -Wshadow                     \
+#    -Wstrict-prototypes          \
+#    -Wuninitialized              \
+#    -Wunsafe-loop-optimizations  \
+#    -Wunused                     \
+#    -Wno-error                   \
+#    -Wno-unused-function
 
 #==============================================================================#
 # Calls                                                                        #
 #==============================================================================#
 
-### BUILD:
+## BUILD:
 all:	$(SHLIB) clean
 
-### PHONY:
+## PHONY:
 .PHONY:	clean all
 
-### CLEAN:
+## CLEAN:
 clean:
 	rm -rf *.o

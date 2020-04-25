@@ -18,7 +18,7 @@ Badge](http://www.r-pkg.org/badges/version/bnxFortran)](https://cran.r-project.o
 
 ## Overview
 
-**Git-Version:** 0.1.8
+**Git-Version:** 0.1.9
 
 The ‘bnxFortran’ package provides some C functions that wrap Fortran
 algorithms. These interface functions are implemented here to be called

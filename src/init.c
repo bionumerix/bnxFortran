@@ -25,11 +25,6 @@
 #include "args.h"
 #include "call.h"
 
-#if _MSC_VER >= 1000
-__declspec(dllexport)
-#endif
-
-
 /******************************************************************************\
 * Local Utility Macros: Define                                                 *
 \******************************************************************************/
@@ -37,29 +32,37 @@ __declspec(dllexport)
 /**
  * Convenience macro for entry point definition for \c .Call interface.
  */
+// clang-format off
 #define PD_CDEF(name)                                                          \
     { #name, (DL_FUNC)&name, sizeof(name##_t) / sizeof(name##_t[0]), name##_t }
+// clang-format on
+
 /**
  * Convenience macro for entry point definition for \c .Fortran interface.
  */
+// clang-format off
 #define PD_FDEF(name, args)                                                    \
     { #name, (DL_FUNC)&F77_SUB(name), sizeof(args) / sizeof(args[0]), args }
+// clang-format on
+
 /**
  * Convenience macro for registering callable functions.
  */
+// clang-format off
 #define PD_RDEF(name) R_RegisterCCallable("bnxFortran", #name, (DL_FUNC)name)
-
+// clang-format on
 
 /******************************************************************************\
 * EntryPoints                                                                  *
 \******************************************************************************/
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic push
-#    pragma GCC diagnostic ignored "-Wmissing-field-initializers"
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic push
+#  pragma GCC diagnostic ignored "-Wmissing-field-initializers"
+#  pragma GCC diagnostic ignored "-Wcast-function-type"
 #endif
+// clang-format on
 
 /**
  * Entry points for \c .Call interface.
@@ -70,8 +73,7 @@ static const R_CMethodDef CEntries[] = {
     PD_CDEF(BF_C_intrpl),
     PD_CDEF(BF_C_uvip3p),
     // null
-    {NULL, NULL, 0}
-};
+    {NULL, NULL, 0}};
 
 /**
  * Entry points for \c .Fortran interface.
@@ -82,21 +84,27 @@ static const R_FortranMethodDef FortEntries[] = {
     PD_FDEF(intrpl, BF_C_intrpl_t),
     PD_FDEF(uvip3p, BF_C_uvip3p_t),
     // null
-    {NULL, NULL, 0}
-};
+    {NULL, NULL, 0}};
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic pop
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic pop
 #endif
-
+// clang-format on
 
 /******************************************************************************\
 * Registration                                                                 *
 \******************************************************************************/
 
-void attribute_visible R_init_bnxFortran(DllInfo *info)
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic push
+#  pragma GCC diagnostic ignored "-Wcast-function-type"
+#endif
+// clang-format on
+
+void attribute_visible // # nocov start
+R_init_bnxFortran(DllInfo *info)
 {
     // Register routines for .C, .Call, and .Fortran interface.
     R_registerRoutines(info, CEntries, NULL, FortEntries, NULL);
@@ -107,28 +115,32 @@ void attribute_visible R_init_bnxFortran(DllInfo *info)
     PD_RDEF(BF_C_nnls);
     PD_RDEF(BF_C_intrpl);
     PD_RDEF(BF_C_uvip3p);
-}
+} // # nocov end
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic push
-#    pragma GCC diagnostic ignored "-Wunused-parameter"
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic pop
 #endif
+// clang-format on
 
-// # nocov start
-void attribute_visible R_unload_bnxFortran(DllInfo *info)
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic push
+#  pragma GCC diagnostic ignored "-Wunused-parameter"
+#endif
+// clang-format on
+
+void attribute_visible // # nocov start
+R_unload_bnxFortran(DllInfo *info)
 {
-  // Release resources.
-}
-// # nocov end
+    // Release resources.
+} // # nocov end
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic pop
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic pop
 #endif
-
+// clang-format on
 
 /******************************************************************************\
 * Local Utility Macros: Undefine                                               *

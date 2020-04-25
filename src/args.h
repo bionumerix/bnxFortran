@@ -24,9 +24,8 @@
 #ifndef SRC_ARGS_H_
 #define SRC_ARGS_H_
 
-#include <Rinternals.h>      // for ...SXP
-#include <R_ext/Rdynload.h>  // for R_NativePrimitiveArgType
-
+#include <Rinternals.h>     // for ...SXP
+#include <R_ext/Rdynload.h> // for R_NativePrimitiveArgType
 
 /******************************************************************************\
 * Arguments: NNLS                                                              *
@@ -49,7 +48,6 @@ static R_NativePrimitiveArgType BF_C_nnls_t[12] = {
     INTSXP,  /* MODE  */
     INTSXP,  /* NSETP */
 };
-
 
 /******************************************************************************\
 * Arguments: Akima                                                             *
@@ -81,6 +79,5 @@ static R_NativePrimitiveArgType BF_C_uvip3p_t[8] = {
     REALSXP, /* YI, */
     INTSXP   /* ERR */
 };
-
 
 #endif /* SRC_ARGS_H_ */

@@ -23,27 +23,26 @@
 
 #include "call.h"
 
-
 /******************************************************************************\
 * Wrapper                                                                      *
 \******************************************************************************/
 
-int
+int //
 BF_C_nnls(double *A, int *MDA, int *M, int *N, double *B, double *X,
-          double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE, 
+          double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE,
           int *NSETP)
 {
     return F77_CALL(nnls)(A, MDA, M, N, B, X, RNORM, W, ZZ, INDEX, MODE, NSETP);
 }
 
-int
+int //
 BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, double *ry,
             int *err)
 {
     return F77_CALL(intrpl)(n, x, y, rn, rx, ry, err);
 }
 
-int
+int //
 BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
             double *ry, int *err)
 {

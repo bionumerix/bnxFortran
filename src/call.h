@@ -24,8 +24,7 @@
 #ifndef SRC_CALL_H
 #define SRC_CALL_H
 
-#include <R_ext/RS.h>  // for F77_NAME, F77_CALL (in .c)
-
+#include <R_ext/RS.h> // for F77_NAME, F77_CALL (in .c)
 
 /******************************************************************************\
 * Wrapper                                                                      *
@@ -35,9 +34,9 @@
  * @brief C wrapper of Lawson's and Hanson's non-negative least squares (NNLS).
  * @copydetails nnls()
  */
-int
+int //
 BF_C_nnls(double *A, int *MDA, int *M, int *N, double *B, double *X,
-          double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE, 
+          double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE,
           int *NSETP);
 
 /**
@@ -55,7 +54,7 @@ BF_C_nnls(double *A, int *MDA, int *M, int *N, double *B, double *X,
  *      y-values (ordinates) are to be displayed.
  * @param[in,out] err An error code.
  */
-int
+int //
 BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, double *ry,
             int *err);
 
@@ -65,10 +64,9 @@ BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, double *ry,
  * @copydetails BF_C_intrpl(int *n, double *x, double *y, int *rn, double *rx, 
  *      double *ry, int *err)
  */
-int
+int //
 BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
             double *ry, int *err);
-
 
 /******************************************************************************\
 * Extern: NNLS                                                                 *
@@ -108,11 +106,12 @@ BF_C_uvip3p(int *np, int *n, double *x, double *y, int *rn, double *rx,
  *      multidimensional arrays in linear memory storage. \c R and F use
  *      column-major order arrangement. The caller must take that into account.
  */
+// clang-format off
 extern int
 F77_NAME(nnls)(double *A, int *MDA, int *M, int *N, double *B, double *X, 
                double *RNORM, double *W, double *ZZ, int *INDEX, int *MODE, 
                int *NSETP);
-
+// clang-format on
 
 /******************************************************************************\
 * Extern: Akima                                                                *
@@ -136,9 +135,11 @@ F77_NAME(nnls)(double *A, int *MDA, int *M, int *N, double *B, double *X,
  *      (ordinates) are to be displayed.
  * @param[in,out] err An error code.
  */
+// clang-format off
 extern int
 F77_NAME(intrpl)(int *l, double *x, double *y, int *n, double *u, double *v, 
                  int *err);
+// clang-format on
 
 /**
  * @brief Fortran function for interpolating optimised Akima splines: ACM 697.
@@ -159,9 +160,10 @@ F77_NAME(intrpl)(int *l, double *x, double *y, int *n, double *u, double *v,
  *      desired points are to be stored.
  * @param[in,out] err An error code.
  */
+// clang-format off
 extern int
 F77_NAME(uvip3p)(int *np, int *nd, double *xd, double *yd, int *ni, double *xi, 
                  double *yi, int *err);
-
+// clang-format on
 
 #endif /* SRC_CALL_H */

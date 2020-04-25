@@ -24,25 +24,24 @@
 #ifndef SRC_INIT_H
 #define SRC_INIT_H
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic push
-#    pragma GCC diagnostic ignored "-Wstrict-prototypes"
-#    pragma GCC diagnostic ignored "-Wredundant-decls"
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic push
+#  pragma GCC diagnostic ignored "-Wstrict-prototypes"
+#  pragma GCC diagnostic ignored "-Wredundant-decls"
 #endif
+// clang-format on
 
-#include <R.h>                 // for basic R headers
-#include <Rinternals.h>        // for ...SXP
-#include <R_ext/Rdynload.h>    // for DllInfo, R_RegisterCCallable, R_CMethodDef
-#include <R_ext/Visibility.h>  // for attribute_visible
+#include <R.h>                // for basic R headers
+#include <Rinternals.h>       // for ...SXP
+#include <R_ext/Rdynload.h>   // for DllInfo, R_RegisterCCallable, R_CMethodDef
+#include <R_ext/Visibility.h> // for attribute_visible
 
-#ifndef EXT_PRAGMAX
-#  if defined(__GNUC__) || defined(__CLANG__)
-#    pragma GCC diagnostic pop
-#  endif
+// clang-format off
+#if defined(EXT_PRAGMA_IGNORE) && (defined(__GNUC__) || defined(__CLANG__))
+#  pragma GCC diagnostic pop
 #endif
-
+// clang-format on
 
 /******************************************************************************\
 * Registration                                                                 *
@@ -51,12 +50,13 @@
 /**
  * @brief Register routine for C and Fortran to R interface.
  */
-void attribute_visible R_init_bnxFortran(DllInfo*);
+void attribute_visible //
+R_init_bnxFortran(DllInfo *);
 
 /**
  * @brief Release resources.
  */
-void attribute_visible R_unload_bnxFortran(DllInfo*);
-
+void attribute_visible //
+R_unload_bnxFortran(DllInfo *);
 
 #endif /* SRC_INIT_H */
